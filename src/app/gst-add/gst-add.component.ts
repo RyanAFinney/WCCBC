@@ -25,9 +25,10 @@ export class GstAddComponent implements OnInit {
   }
 
   addBusiness(person_name, business_name, business_gst_number) {
+    console.log("Calling addBusiness");
     this.bs.addBusiness(person_name, business_name, business_gst_number);
   }
-  
+
   ngOnInit() {
   }
 

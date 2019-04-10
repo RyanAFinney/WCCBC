@@ -18,7 +18,8 @@ export class BusinessService {
     };
 
     console.log(obj);
-
+    console.log(`${this.uri}/add`);
+    
     this.http.post(`${this.uri}/add`, obj).subscribe(res => console.log('Done'));
   }
 }
