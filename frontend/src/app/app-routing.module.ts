@@ -11,16 +11,20 @@ const routes: Routes = [
   },
   {
     path: 'business/edit/:id',
-    component: GstEditComponent
+    component: GstEditComponent,
+    runGuardsAndResolvers: 'always'
   },
   {
     path: 'business',
-    component: GstGetComponent
+    component: GstGetComponent,
+    runGuardsAndResolvers: 'always'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    onSameUrlNavigation: "reload"
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
